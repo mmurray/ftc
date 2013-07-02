@@ -1,0 +1,69 @@
+<!-- <h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <p><%= f.label :email %><br />
+  <%= f.text_field :email %></p>
+
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></p>
+
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %> -->
+
+<% content_for :stylesheets do %>
+    <%= raw stylesheet_link_merged :registration %>
+<% end %>
+
+<div class="round-box black padded fullWidth clearfix">
+<div class="registrationForm fleft">
+  <h2>Create an account</h2>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
+    <%= error_messages_for :user, :header_message => "Oops, we had trouble creating your account" %>
+    <div class="form-field"><%= form.label :username, "username:" %><%= form.text_field :username %></div>
+    <div class="form-field"><%= form.label :email, "email:" %><%= form.text_field :email %></div>
+    <div class="form-field"><%= form.label :password, form.object.new_record? ? "password:" : "change password:" %><%= form.password_field :password %></div>
+    <div class="form-field"><%= form.label :password_confirmation, "password (again):" %><%= form.password_field :password_confirmation %></div>
+  <div class="form-button">
+    <%= form.submit "Register", :class => 'blueButton round-box' %>
+  </div>
+  <% end %>
+</div>
+<div class="registrationForm-rightCol fright">
+<div class="registrationForm-externalLogin fleft">
+  <h2>Or, sign in via Facebook...</h2>
+   <ul>
+    <li class="facebook">
+      <%= link_to "Sign in as User with Facebook", user_oauth_authorize_url(:facebook), :class => 'facebook-login' %>
+    </li>
+    <!-- <li><a class="login-party large google" href="#">Google</a></li>
+        <li><a class="login-party large twitter" href="#">Twitter</a></li>
+        <li><a class="login-party large yahoo" href="#">Yahoo</a></li>
+        <li><a class="login-party large microsoft" href="#">Microsoft</a></li>
+        <li><a class="login-party large myspace" href="#">MySpace</a></li> -->
+   </ul>
+</div>
+<div class="registrationForm-quickLogin fright">
+  <h2>Already registered?</h2>
+  <% form_for :user, :url=>'/users/sign_in' do |f| %>
+  <div class="form-field">
+    <label for="email">username/email:</label>
+    <input type="text" id="email" name="email" />
+  </div>
+  <div class="form-field">
+    <label for="password">password:</label>
+    <input type="password" id="password" name="password" />
+  </div>
+  <div class="form-button">
+    <input class="blueButton round-box" type="submit" value="Log in">
+  </div>
+<% end %>
+</div>
+</div>
+</div>

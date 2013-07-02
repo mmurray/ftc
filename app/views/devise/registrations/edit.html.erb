@@ -1,0 +1,43 @@
+
+<% content_for :stylesheets do %>
+    <%= raw stylesheet_link_merged :login %>
+<% end %>
+
+<div class="round-box black clearfix">
+<div class="form formWide">
+
+<h2>Change Password</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= error_messages_for :user, :header_message => "Oops, we had trouble saving your changes", :message => nil %>
+<table>
+  <tr>
+    <td><%= f.label :password %></td>
+    <td><%= f.password_field :password %></td>
+    <td><i>(leave blank if you don't want to change it)</i></td>
+  </tr> 
+  <tr>
+    <td><%= f.label :password_confirmation %></td>
+    <td><%= f.password_field :password_confirmation %></td>
+  </tr> 
+  <tr>
+    <td><%= f.label :current_password %></td>
+    <td><%= f.password_field :current_password %></td>
+    <td><i>(we need your current password to confirm your changes)</i></td>
+  </tr> 
+  <tr>
+    <td></td>
+    <td class="form-buttons padded">
+      <%= f.submit "Update", :class=>"blueButton round-box" %>
+    </td>
+  </tr> 
+  
+</table>
+<% end %>
+
+<!-- <h3>Cancel my account</h3>
+
+<p class="unhappy">Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p> -->
+
+</div>
+</div>

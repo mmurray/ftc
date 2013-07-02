@@ -1,0 +1,10 @@
+<% content_for :stylesheets do %>
+  <%= raw stylesheet_link_merged :admin %>
+<% end %>
+
+<h1>Editing league</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @league %> |
+<%= link_to 'Back', leagues_path %>

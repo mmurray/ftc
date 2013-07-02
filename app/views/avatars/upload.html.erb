@@ -1,0 +1,26 @@
+
+<% content_for :stylesheets do %>
+    <%= raw stylesheet_link_merged :login %>
+<% end %>
+
+<div class="round-box black clearfix">
+<div class="loginForm">
+
+<h2>Upload Avatar</h2>
+
+
+<%= form_for(@user, :url => '/users/', :html => { :method => :put }) do |f| %>
+  <%= error_messages_for :user, :header_message => "Oops, we had trouble saving your changes", :message => nil %>
+<table> 
+  <tr>
+    <td><%= f.label :avatar %></td>
+    <td><%= f.file_field :avatar %></td>
+  </tr> 
+  <tr>
+    <td class="button" colspan="2">
+      <%= f.submit "Submit", :class=>"blueButton round-box" %>
+    </td>
+  </tr> 
+  
+</table>
+<% end %>

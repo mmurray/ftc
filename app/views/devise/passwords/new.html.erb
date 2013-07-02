@@ -1,0 +1,26 @@
+
+<% content_for :stylesheets do %>
+    <%= raw stylesheet_link_merged :login %>
+<% end %>
+
+<div class="round-box black clearfix">
+ <div class="loginForm">
+
+<h2>Forgot your password?</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= error_messages_for resource, :header_message => nil, :message => "Oops, something went wrong..." %>
+<table>
+  <tr>
+    <td><%= f.label :email %></td>
+    <td><%= f.text_field :email %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="remember"><%= f.submit "Send me reset password instructions", :class => "blueButton round-box" %></td>
+  </tr>
+</table>
+<% end %>
+
+</div>
+</div>

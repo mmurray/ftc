@@ -1,0 +1,94 @@
+<% content_for :stylesheets do %>
+  <%= raw stylesheet_link_merged :viewTrade %>
+<% end %>
+<div class="round-box black padded clearfix">
+
+  <div class="viewTrade">
+    <div class="viewTrade-top">
+      <div class="viewTrade-avatar">
+        <a href="/users/<%= @trade.user.id %>"><%= image_tag @trade.user.profile.avatar.url(:small) %></a>
+      </div>
+      <div class="viewTrade-title">
+        <h2><%= @trade.user.username.possessive %> <%= @trade.league.abbreviation %> trade</h2>
+        <p>posted <%= time_ago_in_words(@trade.created_at) %> ago</p>
+      </div>
+    </div>
+    <div class="viewTrade-middle">
+      <div class="viewTrade-team viewTrade-team-mine">
+        <h3>Trading:</h3>
+        <ul>
+          <% @trade.my_players.each do |player| %>
+          <li><a href="<%= player.url %>"><%= player.name %> (<%= player.team.abbreviation %>)</a></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="viewTrade-for">for</div>
+      <div class="viewTrade-team viewTrade-team-theirs">
+        <h3>Receiving:</h3>
+        <ul>
+          <% @trade.their_players.each do |player| %>
+          <li><a href="<%= player.url %>"><%= player.name %> (<%= player.team.abbreviation %>)</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="viewTrade-bottom">
+      <% if !@comments.empty? %>
+      <div class="viewTrade-comments clearfix">
+        <h3>Discussion</h3>
+        <ul>
+          <% @comments.each do |comment| %>
+          <li>
+            <a class="viewTrade-comment-avatar" href="/users/<%= comment.user.id %>">
+              <%= image_tag comment.user.profile.avatar.url(:thumb) %>
+              <span><%= comment.user.username %></span>
+            </a>
+            <div class="viewTrade-comment-wrap">
+              <div class="viewTrade-comment">
+                <div class="viewTrade-comment-content"><%= comment.comment %></div>
+                <span class="viewTrade-comment-date">posted <%= time_ago_in_words(comment.created_at) %> ago</span>
+              </div>
+            </div>
+            
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div class="viewTrade-postComment">
+        <h3>Post a comment</h3>
+        <% if user_signed_in? %>
+        <!-- <form method="post">
+                 <p><label for="id_comment">Comment: <span class="viewTrade-comment-count">(1000 characters or less..)</span></label> <textarea id="id_comment" rows="10" cols="40" name="comment"></textarea></p>
+                 <input class="blueInput" type="submit" value="Submit" />
+               </form> -->
+          <% form_for [@trade,@comment] do |f| %>
+            <% if @comment.errors.any? %>
+              <div id="errorExplanation">
+                <h3><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h3>
+                <ul>
+                <% @comment.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+            
+            <p>
+              <%= f.label :comment, raw("Comment: <span class=\"viewTrade-comment-count\">(1000 characters or less..)</span>") %>
+              <%= f.text_area :comment %>
+            </p>
+            <p>
+              <%= f.submit 'Submit', :class => "blueButton round-box" %>
+            </p>
+          <% end %>
+        <% else %>
+          <p class="viewTrade-postComment-message"><a href="/login/">Log-in</a> or <a href="/register/">register</a> to post a comment. It's quick and free!</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <%= render :partial => 'ads/adcolumn', :locals => {:class_name=>'fright'}%>
+  
+</div>

@@ -1,0 +1,87 @@
+<div class="tradeBox">
+  <div class="tradeBox-results">
+    <div class="tradeBox-icon up">
+      100% say "Do it"
+    </div>
+  </div>
+  <div class="tradeBox-col left">
+    <div class="tradeBox-col-label">Trading</div>
+    <ul>
+      <li>Ichirio Suzuki</li>
+      <li>Alex Rodriguez</li>
+      <li>Ichirio Suzuki</li>
+      <li>Ichirio Suzuki</li>
+      <li>Ichirio Suzuki</li>
+      <li>Ichirio Suzuki</li>
+      <li>Alex Rodriguez</li>
+    </ul>
+  </div>
+  <div class="tradeBox-col right">
+    <div class="tradeBox-col-label">Picking-up</div>
+    <ul>
+      <li>Ichirio Suzuki</li>
+      <li>Alex Rodriguez</li>
+      <li>Ichirio Suzuki</li>
+      <li>Ichirio Suzuki</li>
+      <li>Ichirio Suzuki</li>
+      <li>Ichirio Suzuki</li>
+      <li>Alex Rodriguez</li>
+    </ul>
+  </div>
+  <div class="tradeBox-buttons">
+    <div class="tradeBox-button"><span class="ico"></span><span class="label">I'd do it!</span></div>
+    <div class="tradeBox-button"><span class="ico down"></span><span class="label">Forget it</span></div>
+  </div>
+  <div class="tradeBox-footer">Posted by <a href="#" class="tradeBox-author"><img src="/avatars/tiny/missing.png" /><span>thisisalongusername</span></a></div>
+</div>
+
+
+
+<div class="tradeBox" id="tradeBox-id_<%= trade.id %>">
+  <div class="tradeBox-bottom">
+    <div class="tradeBox-avatar">
+      <a href="/users/<%= trade.author.id %>">
+        <img alt="avatar" src="{{ MEDIA_URL }}img/nopic-small.png" />
+        <span>mike</span>
+      </a>
+    </div>
+    <div class="tradeBox-results{% if not trade.do_it %} tradeBox-results-forgetIt{% endif %}">
+      {{ trade.percent }}% say {% if trade.do_it %}Yes{% else %}No{% endif %}
+      <span>{{ trade.votes.all|length }} votes so far</span>
+    </div>
+    <div class="tradeBox-teams">
+      <div class="tradeBox-team">
+        <div class="tradeBox-team-title-mine">Mike's Team</div>
+      </div>
+      <div class="tradeBox-team">
+        <div class="tradeBox-team-title-theirs">Their Team</div>
+      </div>
+    </div>
+    <div class="fleft">
+      <ul class="tradeBox-players">
+        {% playerlist trade.my_players.all %}
+
+
+    </div>
+    <div class="fright">
+
+        {% playerlist trade.their_players.all %}
+
+    </div>
+    {% if not hasVote %}
+    <ul class="tradeBox-vote-buttons">
+      <li class="tradeBox-vote-button-yes">
+        <a href="#">I'd do it</a>
+      </li>
+      <li class="tradeBox-vote-button-no">
+        <a href="#">Forget it</a>
+      </li>
+    </ul>
+    {% else %}
+    <div class="tradeBox-vote-answer tradeBox-vote-answer-{{ vote }}">You voted {{ vote }}</div>
+    {% endif %}
+    <div class="tradeBox-menu">
+      <a href="/trades/view/{{ trade.id }}">View Details/Discussion</a>
+    </div>
+  </div>
+</div>

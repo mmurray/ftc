@@ -1,0 +1,12 @@
+development:
+  bucket: ftc-avatars
+  access_key_id: 
+  secret_access_key: 
+test:
+  bucket: ftc-avatars
+  access_key_id: 
+  secret_access_key: 
+production:
+  bucket: ftc-avatars
+  access_key_id: 
+  secret_access_key:   

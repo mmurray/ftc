@@ -1,0 +1,14 @@
+db/*.sqlite3
+lib
+tmp
+log/*.log
+tmp/**/*
+vendor/cache/*
+.DS_Store
+.bundle/
+.project
+Gemfile.lock
+vendor/
+mysql/
+test/
+script/

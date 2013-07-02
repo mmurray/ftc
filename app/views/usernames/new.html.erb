@@ -1,0 +1,26 @@
+<% content_for :stylesheets do %>
+    <%= raw stylesheet_link_merged :login %>
+<% end %>
+
+<div class="round-box black clearfix padded">
+  <h2 class="choose-username">Your account has been created successfully, but in order to continue we need you to choose a username.</h2>
+ <div class="loginForm">
+  <%= form_for @user, :url => '/usernames' do |f| %>
+    <%= error_messages_for @user, :header_message => nil, :message => "Oops, something went wrong..." %>
+    <table>
+      <tr>
+        <td><%= f.label :username %></td>
+        <td><%= f.text_field :username, :value=>'' %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="remember"><%= f.submit "Submit", :class => "blueButton round-box" %></td>
+      </tr>
+    </table>
+    
+   
+  <% end %>
+
+  </div>
+
+</div>

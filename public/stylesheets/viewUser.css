@@ -1,0 +1,40 @@
+/* ftc 'view user' style sheet
+ * copyright (c) 2009 fantasytradecritic.com
+ * @author mike murray
+ * @website http://murz.net
+ */
+
+#content {}
+.viewUser {float:left;}
+.viewUser-avatar {float:left;}
+.viewUser-avatar a:link, .viewTrade-avatar a:visited {border:1px solid;height:100px;width:100px;display:block;} 
+.viewUser-title {float:left;padding-left:25px;}
+.sans-avatar.viewUser-title {padding-left:0px;padding-bottom:10px;margin-top:-10px;}
+.viewUser-title h2 {font-size:2em;width:100%;margin-top:20px;color:#14B8C7;clear:both;}
+.sans-avatar.viewUser-title h2 {margin-bottom:2px;}
+.viewUser-title p {margin-left:0px;margin-top:0px;font-size:1em;color:#aaa;}
+.viewUser-middle {clear:both;padding:25px;}
+.viewUser-tradesWrap {float:left;width:760px;}
+.viewUser-tradeBox h2 {font-size:1.2em;color:#14B8C7;border-bottom:1px solid #999;margin:5px 0 10px 0;padding:5px;clear:both;}
+
+#content table {
+  border-collapse:collapse;
+  width:100%;
+  color:#777;
+}
+
+#content table th {
+  padding:5px;
+  text-align:left;
+  background:#222;
+}
+
+#content table tr {
+  background:#333;
+}
+
+#content table td {
+  padding:5px;
+  color:#bbb;
+}
+.viewUser-tradeBox .tradeBox {margin-right:0px;}

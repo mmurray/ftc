@@ -1,0 +1,38 @@
+<% content_for :stylesheets do %>
+  <%= raw stylesheet_link_merged :viewUser %>
+<% end %>
+<div class="round-box black padded clearfix">
+
+  <div class="viewUser">
+    <div class="viewUser-top">
+      <div class="viewUser-avatar"><%= image_tag @user.profile.cdn_url(:small) %></div>
+      <div class="viewUser-title">
+        <h2><%= @user.username %></h2>
+        <p>joined <%= time_ago_in_words(@user.created_at) %> ago</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ <div class="viewUser-tradesWrap">
+  <div class="viewUser-tradeBox">
+    <h2><%= @user.username.possessive %> recent trades</h2>
+    <ul>
+      <% @recent_trades.each do |trade| %>
+      <li><%= render trade %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="viewUser-tradeBox">
+    <h2><%= @user.username.possessive %> popular trades</h2>
+    <ul>
+      <% @popular_trades.each do |trade| %>
+      <li><%= render trade %></li>
+      <% end %>
+    </ul>
+  </div>
+ </div>
+
+  <%= render :partial => 'ads/adcolumn', :locals => {:class_name=>'fright'}%>
+  
+

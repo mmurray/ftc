@@ -1,0 +1,9 @@
+<ul id="navigation">
+  <% navcache = nav %>
+  <li<% if navcache == 'home' %> class="selected"<% end %> id="nav_home"><a href="/home">Home</a></li>
+  <li<% if navcache == 'about' %> class="selected"<% end %> id="nav_about"><a href="/about">About</a></li>
+  <li<% if navcache == 'browse' %> class="selected"<% end %> id="nav_browse"><a href="/trades/">Browse</a></li>
+  <li<% if navcache == 'search' %> class="selected"<% end %> id="nav_search"><a href="/trades/search/">Search</a></li>
+  <li<% if navcache == 'contact' %> class="selected"<% end %> id="nav_contact"><a href="/contact">Contact</a></li>
+  <li<% if navcache == 'blog' %> class="selected"<% end %> id="nav_blog"><a href="http://blog.fantasytradecritic.com">Blog</a></li>
+</ul>

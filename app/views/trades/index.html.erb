@@ -1,0 +1,24 @@
+
+<div class="round-box padded black clearfix">
+<div class="browseTrades-top">
+  <h2><%= @mine %><%= @sort %><% if @league != 'Mine' and @league !='All' %> <%= @league.upcase %><% end %> Trades</h2>
+  <ul class="browseTrades-top-menu">
+    <li>Browse league: <% @leagues.each do |league| %><a href="/trades/browse/<%= @sort.downcase %>/<%= league.abbreviation.downcase %>/"><%= league.abbreviation %></a>, <% end %><a href="/trades/browse/<%= @sort.downcase %>/all/">View All</a></li>
+    <li>Sort by: <a href="/trades/browse/popular/<%= @league.downcase %>/">Most Popular</a>, <a href="/trades/browse/recent/<%= @league.downcase %>/">Most Recent</a>
+  </ul>
+</div>
+</div>
+<div class="tradesContainer tradesContainer-browse clearfix">
+  <div class="trades-wrap">
+  <% @trades.each do |trade| %>
+    <%= render trade %>  
+  <% end %>
+  <div class="pagination">
+      <span class="step-links">
+          <%= will_paginate(@trades) %>
+      </span>
+  </div>
+  </div>
+  <%= render :partial => 'ads/adcolumn', :locals => {:class_name=>'fright'}%>
+</div>
+

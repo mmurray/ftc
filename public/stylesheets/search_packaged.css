@@ -1,0 +1,13 @@
+ .searchTrades-top {color:#14B8C7;font-size:0.7em;}
+.searchTrades-top h2 {float:left;margin-top:1px;}
+.searchTrades-top ul {float:left;margin-left:15px;}
+.searchTrades-top-menu {margin-top:1px;font-size:1.3em;}
+.searchTrades-top input[type='submit'] {margin-left:15px;margin-top:3px;}
+.searchTrades-top input[type='text'], .searchTrades-top select {font-size:13px;}
+.searchTrades-top label {font-size:13px;}
+a.search_result {display:block;}
+.searchContainer {padding-top:10px;}
+.search-wrap {float:left;padding-left:10px;padding-right:10px;}
+.search-wrap table {width:700px;}
+.search-wrap th {text-align:left;}
+.search-wrap td a:link, .search-wrap td a:visited {background:#333;border:0;border-bottom:1px solid #000;font-size:19px;padding:5px;}

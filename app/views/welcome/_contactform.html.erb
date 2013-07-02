@@ -1,0 +1,21 @@
+<%= form_for :contact, :url => {:action =>'send_contact_form', :controller=>'welcome'} do |f| %>
+  <%= error_messages_for :contact, :header_message => nil, :message => "Oops, something went wrong..." %>
+  <table>
+    <tr>
+      <td><%= f.label :name, "Name:" %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email, "Email:" %></td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <td class="top"><%= f.label :message, "Message:" %></td>
+      <td><%= f.text_area :message %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="remember"><input type="submit" class="blueButton round-box" %></td>
+    </tr>
+  </table>
+<% end %>

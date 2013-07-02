@@ -1,0 +1,282 @@
+/* ftc 'trades' style sheet
+ * copyright (c) 2009 fantasytradecritic.com
+ * @author mike murray
+ * @website http://murz.net
+ */
+ 
+.tradeBox:hover {cursor:default;}
+.tradeBox {width:253px;height:351px;background:url(../images/trade-box_bg.jpg);display:block;float:left;margin-right:5px;}
+.tradeBox-results {padding:21px 15px 13px 15px;display:block;color:#a2e7f7;text-shadow:1px 1px 2px rgba(0,0,0,0.8);font-weight:bold;font-size:16px;}
+.tradeBox-results .txt {margin-top:-6px;display:block;margin-bottom:3px;}
+.tradeBox-results a.comments:link,
+.tradeBox-results a.comments:visited {background:rgba(0,0,0,0.2);padding:2px 5px 2px 5px;border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;opacity:0.9;font-size:9px;line-height:10px;clear:both;display:block;float:left;text-decoration:none;border-bottom:0;color:#eee;text-transform:uppercase;margin-left:20px;margin-top:2px;}
+.tradeBox-icon {background:url(../images/thumb_ico.png) no-repeat;height:29px;display:block;padding-left:50px;padding-top:10px;}
+.tradeBox-icon.up {}
+.tradeBox-icon.down {background-position:0px -39px;}
+.tradeBox-col {font-size:12px;}
+.tradeBox-col-label {font-weight:bold;margin-bottom:15px;font-size:13px;color:#5A646F;}
+.tradeBox-col ul {font-size:11px;letter-spacing:-0.05em;min-height:150px;}
+.tradeBox-col ul li {margin-bottom:12px;}
+.tradeBox-col.left ul {margin-left:6px;}
+.tradeBox-col.right ul {margin-right:6px;}
+.tradeBox-col.left {margin-left:20px;margin-top:10px;float:left;}
+.tradeBox-col.right {margin-right:20px;margin-top:10px;float:right;text-align:right;}
+.tradeBox-footer {clear:both;font-size:11px;width:100%;text-align:center;padding-top:11px;color:#47525F;}
+a.tradeBox-author:link,a.tradeBox-author:visited,
+a.tradeBox-league:link,a.tradeBox-league:visited {display:inline-block;border-bottom:none;color:#47525F;font-weight:bold;}
+a.tradeBox-author:hover,
+a.tradeBox-league:hover {color:#444;}
+.tradeBox-author img {margin-right:3px;margin-left:3px;vertical-align:middle;border:1px solid #67727F;}
+.tradeBox-buttons {clear:both;width:190px;margin:0 auto 0 auto;}
+.tradeBox-button {
+  margin-right:5px;
+  margin-left:5px;
+  background:url(../images/sans-css3/blue_gradient.jpg) repeat-x;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, #0c7e88),
+      color-stop(1, #14b8c7)
+  );
+  background:-moz-linear-gradient(
+      center bottom,
+      #0c7e88 0%,
+      #14b8c7 100%
+  );
+  color:#fff;
+  font-size:12px;
+  padding:7px;
+  float:left;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  text-shadow:-1px -1px 1px rgba(0,0,0,0.3),1px 1px 2px rgba(255,255,255,0.6);
+  -moz-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  border:1px solid rgba(0,0,0,0.5);
+}
+.tradeBox-button span.ico {
+  background:url(../images/thumb_ico_small.png) no-repeat;
+  width:13px;
+  display:block;
+  height:16px;
+  float:left;
+  margin-right:5px;
+}
+.tradeBox-button span.ico.down {
+  background-position:0px -16px;
+}
+.tradeBox-button span.label,
+.tradeBox-vote-answer span.label {
+  padding-top:2px;
+  display:block;
+  float:left;
+}
+
+.tradeBox-button:hover {
+  border:1px solid rgba(0,0,0,0.8);
+  cursor:pointer;
+}
+
+.tradeBox p.loading {
+  -moz-border-radius:5px 5px 5px 5px;
+  -webkit-border-radius:5px 5px 5px 5px;
+  border-radius:5px 5px 5px 5px;
+  background:url("../images/loading.gif") no-repeat scroll 8px 7px #FFFFFF;
+  clear:both;
+  color:#13959F;
+  font-size:13px;
+  height:20px;
+  margin:0 auto 3px;
+  padding:8px 5px 2px 30px;
+  width:140px;
+}
+
+.tradeBox-vote-answer {
+  margin-right:5px;
+  margin-left:5px;
+  background:url(../images/sans-css3/blue_gradient.jpg) repeat-x;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, #777),
+      color-stop(1, #aaa)
+  );
+  background:-moz-linear-gradient(
+      center bottom,
+      #777 0%,
+      #aaa 100%
+  );
+  color:#fff;
+  font-size:12px;
+  padding:7px;
+  float:left;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  text-shadow:-1px -1px 1px rgba(0,0,0,0.3),1px 1px 2px rgba(255,255,255,0.6);
+  -moz-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  border:1px solid rgba(0,0,0,0.5);
+  margin:0 0 0 51px;
+}
+
+.tradeBox-vote-answer-false {
+  margin-right:5px;
+  margin-left:5px;
+  background:url(../images/sans-css3/blue_gradient.jpg) repeat-x;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, #777),
+      color-stop(1, #aaa)
+  );
+  background:-moz-linear-gradient(
+      center bottom,
+      #777 0%,
+      #aaa 100%
+  );
+  color:#fff;
+  font-size:12px;
+  padding:7px;
+  float:left;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  text-shadow:-1px -1px 1px rgba(0,0,0,0.3),1px 1px 2px rgba(255,255,255,0.6);
+  -moz-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  border:1px solid rgba(0,0,0,0.5);
+  margin:0 0 0 51px;
+}
+
+.tradeBox-vote-answer .ico {
+  background:url(../images/thumb_ico_small.png) no-repeat;
+  width:13px;
+  display:block;
+  height:16px;
+  float:left;
+  margin-right:5px;
+}
+
+.tradeBox-vote-answer-false .ico {
+  background-position:0px -16px;
+}
+.tradesContainer {margin-top:10px;clear:both;float:left;}
+.trades-wrap {width:780px;float:left;}
+.trades-column {width:230px;float:left;margin:5px;}
+.trades-column-tab a:link,.trades-column-tab a:visited {font-size:1em;text-align:center;width:55px;height:33px;display:block;background:url(../images/trade-container_tab.png);border:0;color:#555;padding:5px 19px 0 7px;margin:0 auto 0 auto;}
+.trades-column-tab a:hover {color:#000;}
+
+.browseTrades-top h2 {font-size:19px;color:#18afbc;float:left;margin-top:5px;margin-left:10px;padding-top:15px;}
+.browseTrades-top ul {float:right;background:#111;padding:10px;color:#fff;margin-top:0px;}
+.browseTrades-top li {margin-bottom:6px;}
+
+.league-select {
+  margin-top:10px;
+}
+
+.league-select li {
+  float:left;
+  margin-right:5px;
+}
+
+.league-select a:link, .league-select a:visited,
+.league-select div {
+  float:left;
+  background:#000;
+  border:1px solid #14b8c7;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  border-radius:15px;
+  padding:5px 10px 5px 10px;
+  font-size:24px;
+  background:#222;
+}
+
+.league-select div {
+  opacity:0.3;
+  border:1px solid #999;
+  color:#999;
+}
+
+p.comingsoon{opacity:0.5;}
+
+
+.league-select a:hover {
+  border:1px solid #A2D348;
+  background:#000;
+}
+
+.league-select .ico {
+  width:47px;
+  height:45px;
+  display:block;
+  padding-left:55px;
+  padding-top:12px;
+}
+
+.league-select .nfl .ico {
+  background:url(../images/league-icons/nfl.png) no-repeat;
+}
+
+.league-select .nhl .ico {
+  background:url(../images/league-icons/nhl.png) no-repeat;
+}
+
+.league-select .nba .ico {
+  background:url(../images/league-icons/nba.png) no-repeat;
+}
+
+h3.step {
+  -webkit-border-radius:10px;
+  padding:10px;
+  background:#FFCC33;color:#993300;border:2px solid #993300;
+}
+
+/*.tradeBox {margin-bottom:10px;clear:both;background:#E8E8E8 url(../img/trade-box_bottom.png) no-repeat bottom;width:230px;min-height:200px;padding-bottom:13px;}
+.tradeBox-bottom {background:url(../img/trade-box_top.png) no-repeat top;width:208px;min-height:220px;padding:6px 11px 0 11px;}
+.tradeBox-avatar a:link,.tradeBox-avatar a:visited {border:1px solid #18afbc;height:45px;width:45px;display:block;line-height:1em;text-align:center;}
+.tradeBox-avatar a:hover {border-color:#A2D348;}
+.tradeBox-avatar {float:left;}
+.tradeBox-results {width:150px;color:#51DF04;float:left;font-size:1.2em;font-weight:bold;margin:11px 0 0 0;text-align:center;width:150px;}
+.tradeBox-results span {line-height:0.9em;color:#BBB;display:block;font-size:0.75em;width:100%;}
+.tradeBox-results-forgetIt {color:#DF7661}
+.tradeBox-teams {clear:both;float:left;margin-top:25px;color:#666666;font-size:0.7em;}
+.tradeBox-team {width:95px;margin:5px 4px 4px 4px;float:left;text-align:center;}
+ul.tradeBox-players {height:107px;vertical-align:middle;display:table-cell;}
+li.tradeBox-player {width:97px;display:block;margin:5px 0 0 5px;clear:both;}
+.tradeBox-player-name {font-size:0.8em;font-weight:bold;color:#fff;width:100%;text-align:center;line-height:1em;}
+.qtip .tradeBox-player-name {color:#555;width:auto;float:left;}
+.qtip p {font-size:0.8em;padding:3px 0;}
+.qtip li.tradeBox-player {width:auto;}
+.tradeBox-player-name span {color:#000;}
+.tradeBox-player-team {font-size:0.7em;font-weight:bold;color:#187077;float:right;padding-right:8px;}
+.tradeBox-players-footer {font-size:0.6em;width:94px;padding:10px 5px 2px 5px;text-align:center;line-height:0.4em;height:5px;}
+.tradeBox-menu {clear:both;width:100%;text-align:center;padding:3px 0 3px 0;}
+.tradeBox-vote-buttons {clear:both;height:40px;padding-top:5px;}
+.tradeBox-vote-buttons li {float:left;width:50%;}
+.tradeBox-vote-buttons li a:link,.tradeBox-vote-buttons li a:visited {border:0;display:block;width:106px;text-indent:-9999px;height:40px;}
+.tradeBox-vote-buttons li a:hover {background-position:0px -40px;}
+.tradeBox-vote-button-yes a:link, .tradeBox-vote-button-yes a:visited {background:url(../img/btn-vote-yes.png) no-repeat;}
+.tradeBox-vote-button-no a:link, .tradeBox-vote-button-no a:visited {background:url(../img/btn-vote-no.png) no-repeat;}
+.tradeBox-vote-answer {text-indent:-9999px;clear:both;width:210px;margin-top:5px;margin-bottom:1px;height:42px;float:left;background:url(../img/trade-box_results.png);}
+.tradeBox-vote-answer-no {background-position:0px 42px;}
+
+.tradesContainer-browse {padding-top:15px;}
+.tradesContainer-browse .tradeBox {margin-left:10px;clear:none;float:left;}
+.browseTrades-top h2 {color:#18afbc;float:left;font-size:1.7em;margin-top:12px;margin-left:10px;}
+.browseTrades-top ul {float:right;background:#111;padding:10px;color:#fff;}
+
+.viewTrade {float:left;}
+.viewTrade h2 {color:#18afbc;float:left;font-size:1.7em;margin-top:12px;margin-left:10px;}
+.viewTrade .time {clear:both;}
+
+.tradeBox-players-other {display:none;}*/
+

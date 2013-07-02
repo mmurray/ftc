@@ -1,0 +1,49 @@
+/* ftc 'home' style sheet
+ * copyright (c) 2009 fantasytradecritic.com
+ * @author mike murray
+ * @website http://murz.net
+ */
+
+/* welcome message */
+.welcome {width:490px;float:left;}
+.welcome h2 {color:#14B8C7;font-size:1.2em;letter-spacing:-0.05em;}
+.welcome p {color:#878787;font-size:0.7em;line-height:2em;margin:8px 0 15px 0;}
+.welcome p a:link,
+.welcome p a:visited {color:#aaa;border-bottom:1px solid #999;}
+.welcome p a:hover {color:#fff;border-bottom:1px solid #fff;}
+.welcome-links {font-size:0.7em;color:#14B8C7;cursor:default;}
+.welcome-links a:link, .welcome-links a:visited {border-bottom:0;}
+
+/* user box */
+.userBox {float:right;}
+.userBox h2 {color:#fff;font-size:1.2em;letter-spacing:-0.05em;}
+.userBox label {margin-bottom:3px;color:#878787;font-size:0.7em;font-weight:bold;display:block;margin-left:10px;width:74px;}
+.userBox-form-field {float:left;margin-right:6px;margin-top:13px;}
+.userBox-form-field input {background-image:none;border:none;padding:9px;font-size:11px;width:120px;}
+
+.userBox-form-button {float:right;}
+input.userBox-form-button-login {margin-top:29px;border:1px solid #000;}
+input.userBox-form-button-login:hover {border:1px solid #fff;cursor:pointer;}
+
+.userBox-links a.userBox-register-link.bluecss3:link,.userBox-links a.userBox-register-link.bluecss3:visited {-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;border-radius:10px;border:1px solid #000;margin:12px 1px 12px 0px;float:left;color:#fff;font-size:11px;font-weight:normal;padding:6px 10px;}
+.userBox-links a.userBox-register-link.bluecss3:hover {border:1px solid #fff; }
+
+.userBox-links {width:100%;clear:both;}
+
+.userBox-links a.facebook-login:link,
+.userBox-links a.facebook-login:visited {float:left;margin:13px 0px 12px 5px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+
+.userBox-forgot-link:link, .userBox-forgot-link:visited {float:left;color:#878787;border:0;text-decoration:underline;font-size:0.8em;font-weight:bold;margin:20px 0 0 10px;}
+a.userBox-forgot-link:hover {color:#ccc;}
+
+
+.userBox-menu {float:left;background:#111;padding:15px 20px 5px 20px;height:127px;}
+.userBox-menu-text {float:right;}
+.userBox-menu p {font-size:1.3em;color:#fff;}
+.userBox-menu ul {list-style:square;padding-top:5px;color:#444;}
+.userBox-menu li {font-size:1em;padding-left:5px;margin-left:30px;line-height:1.4em;}
+.userBox-menu li a:link,.userBox-menu li a:visited {color:#999;border-bottom:1px solid #999;}
+.userBox-menu li a:hover {color:#fff;}
+a.userBox-avatar:link, a.userBox-avatar:visited {float:left;border:1px solid;width:100px;height:100px;display:block;margin:5px 30px 10px 10px;}
+.userBox-avatar span {line-height:0.4em;font-size:0.8em;display:block;font-weight:normal;width:100px;text-align:center;}
+

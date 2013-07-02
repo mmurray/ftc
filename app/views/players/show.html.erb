@@ -1,0 +1,32 @@
+<% content_for :stylesheets do %>
+  <%= raw stylesheet_link_merged :viewUser %>
+<% end %>
+<div class="round-box black padded clearfix">
+
+  <div class="viewUser">
+    <div class="viewUser-top">
+      <div class="viewUser-title sans-avatar">
+        <h2><%= @player.name %></h2>
+        <p><%= @player.team.city %> <%= @player.team.name %></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ <div class="viewUser-tradesWrap">
+  <div class="viewUser-tradeBox">
+    <h2>Recent trades with <%= @player.name %></h2>
+    <ul>
+    
+    </ul>
+  </div>
+  <div class="viewUser-tradeBox">
+    <h2>Popular trades with <%= @player.name %></h2>
+    <ul>
+    
+    </ul>
+  </div>
+ </div>
+
+  <%= render :partial => 'ads/adcolumn', :locals => {:class_name=>'fright'}%>
+  

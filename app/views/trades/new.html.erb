@@ -1,0 +1,111 @@
+<% content_for :stylesheets do %>
+<%= raw stylesheet_link_merged :tradeForm %>
+<% end %>
+
+<% content_for :javascript do %>
+<%= raw javascript_include_merged :tradeForm %>
+<% end %>
+
+<div class="round-box grey padded">
+  
+  <h2>Create an <%= @league.abbreviation %> trade</h2>
+  
+  
+  <% if @trade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trade.errors.count, "error") %> prohibited this trade from being saved:</h2>
+
+      <ul>
+      <% @trade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+    <p>A small space here for text, perhaps a quick tutorial on creating a trade that fits in to this text box. A small space here for text, perhaps a quick tutorial on creating a trade that fits in to this text box. A small space here for text, perhaps a quick tutorial on creating a trade that fits in to this text box. A small space here for text, perhaps a quick tutorial on creating a trade that fits in to this text box.</p>
+    <div class="createTrade-form-wrapper">
+    <%= form_for(@trade) do |f| %>
+      <% cache(:action=>'new', :action_suffix=>'tradeForm-'+@league.abbreviation) do %>
+      <div class="createTrade-form-field createTrade-form-field-league">
+      </div>
+      <div class="createTrade-form_team-wrap">
+        <div class="createTrade-form_team createTrade-form_team-myTeam">
+          <h3>Trading:</h3>
+          <ul>
+            <li>
+              <div class="createTrade-form_player-wrapLeft">
+                <div class="createTrade-form_player-wrapRight">
+                  <div class="createTrade-form_player">
+                    <div class="createTrade-form_player-remove">remove</div>
+                    <div class="createTrade-form_field">
+                      <label>Player's Name</label>
+                      <%= f.collection_select :my_players, @players, :id, :name_for_autocomplete, {}, {:name=>'trade[my_player_ids][]'}  %>
+                    </div>
+                   <!-- <div class="createTrade-form_field">
+                      <label>Player's Team</label>
+                      <select cl name="00000000-0000-0000-0000-000000000001-team_mine" />
+                        {% for team in teams %}
+                        <option value="{{ team.id }}">{{ team.abbreviation }} - {{ team.name }}</option>
+                        {% endfor %}
+                      </select>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="createTrade-form_team-buttons">
+            <div class="blueButton round-box f12">Add Another Player</div>
+          </div>
+        </div>
+        <div class="createTrade-form_team createTrade-form_team-theirTeam">
+          <h3>Receiving:</h3>
+          <ul>
+            <li>
+              <div class="createTrade-form_player-wrapLeft">
+                <div class="createTrade-form_player-wrapRight">
+                  <div class="createTrade-form_player">
+                    <div class="createTrade-form_player-remove">remove</div>
+                    <div class="createTrade-form_field">
+                      <label>Player's Name</label>
+                      <%= f.collection_select :their_players, @players, :id, :name_for_autocomplete, {}, {:name=>'trade[their_player_ids][]'}  %>
+                    </div>
+                    <!--<div class="createTrade-form_field">
+                      <label>Player's Team</label>
+                      <select name="00000000-0000-0000-0000-000000000002-team_theirs" />
+                        <option value="1">SEA - Seattle Seahawks</option>
+                      </select>
+                    </div>--> 
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="createTrade-form_team-buttons">
+            <div class="blueButton round-box f12">Add Another Player</div>
+          </div>
+        </div>
+      </div>
+      <div class="createTrade-form-field createTrade-form-field-comment">
+        <label>Comment (Optional) <span class="createTrade-form_comment-count"><span id="createTrade-form_comment-count-num">1000</span> characters remaining</span></label>
+        <%= f.text_area :comment %>
+      </div>
+      <% end %>
+      <div class="createTrade-form_buttons">
+        <%= f.hidden_field :league_id, :value => @league.id %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.submit "OK, Create My Trade", :class => "greenButton round-box f16 " %>
+      </div>
+    <% end %>
+    </div>
+  
+
+
+<%= link_to 'Cancel', trades_path %>
+
+
+</div>
+
+

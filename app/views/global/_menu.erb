@@ -1,0 +1,10 @@
+<div id="menu">
+  <% if current_user %>
+  <a href="/trades/new">Create a Trade</a> - 
+  <a href="/trades/browse/recent/mine/">My Trades</a> - 
+  <a href="/logout/">Log Out</a>
+  <% else %>
+  <a href="/register/">Create New Account</a> - 
+  <a href="/login/">Log In</a>
+  <% end %>
+</div>

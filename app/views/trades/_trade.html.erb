@@ -1,0 +1,34 @@
+<div id="tradeBox-<%= trade.id %>" class="tradeBox">
+  <div class="tradeBox-results">
+    <div class="tradeBox-icon <% if trade.do_it %>up<% else %>down<% end %>">
+      <span class="txt"><% if trade.percent > 0 %><%= trade.percent %>% say <% if trade.do_it %>"I'd do it"<% else %>"Forget it"<% end %><% else %>No votes recorded<% end %></span>
+      <a class="comments" href="/trades/<%= trade.id %>">View comments &rarr;</a>
+    </div>
+  </div>
+  <div class="tradeBox-col left">
+    <div class="tradeBox-col-label">Trading</div>
+    <ul>
+      <% trade.my_players.each do |player| %>
+      <li><%= player.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="tradeBox-col right">
+    <div class="tradeBox-col-label">Picking-up</div>
+    <ul>
+      <% trade.their_players.each do |player| %>
+      <li><%= player.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% cached_cookie = get_vote_cookie(trade.id) %>
+  <% if !cached_cookie %>
+  <div class="tradeBox-buttons">
+      <div class="tradeBox-button tradeBox-voteButton-yes"><span class="ico"></span><span class="label">I'd do it!</span></div>
+      <div class="tradeBox-button tradeBox-voteButton-no"><span class="ico down"></span><span class="label">Forget it</span></div>
+  </div>
+  <% elsif %>
+    <div class="tradeBox-vote-answer tradeBox-vote-answer-<%= cached_cookie %>"><span class="ico"></span><span class="label"><% if cached_cookie == 'false' %>You said "Forget it"<% else %>You said "I'd do it!'"<% end %></span></div>
+  <% end %>
+  <div class="tradeBox-footer">Posted by <a href="/users/<%= trade.user.id %>" class="tradeBox-author"><span><%= trade.author %></span></a> in <a class="tradeBox-league" href="/trades/browse/recent/<%= trade.league.abbreviation.downcase %>"><%= trade.league.abbreviation %></a></div>
+</div>

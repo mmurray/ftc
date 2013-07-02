@@ -1,0 +1,126 @@
+<% content_for :stylesheets do %>
+  <%= raw stylesheet_link_merged :home %>
+<% end %>
+<div class="round-box black fleft fullWidth padded">
+<div class="welcome">
+  <h2>Welcome to fantasy trade critic</h2>
+  <p>Ever made a bad trade that ruined your fantasy season? Want to get fresh opinions on potential trades from people who are not involved in your league? Fantasy Trade Critic is here to help. Just <a rel="nofollow" href="/trades/new">post your trade</a> and get free fantasy trade advice from fantasy veterans and experts across the country. Never make an uninformed trade decision again.</p>
+  <div class="welcome-links">
+    <a href="/advertise">advertise with us</a> - 
+    <a href="http://twitter.com/tradecritic">twitter</a> - 
+    <a href="/contact">contact</a>
+  </div>
+</div>
+<div class="userBox">
+<% if current_user %>
+  <div class="userBox-menu">
+  <div class="userBox-menu-text">
+    <p>Welcome, <%= current_user.username %>.</p>
+  <ul>
+    <li><a href="/users/<%= current_user.id %>">View Profile</a></li>
+    <li><a href="/users/edit">Change Password</a></li>
+    <li><a href="/avatars/upload">Upload Avatar</a></li>
+  </ul>
+  </div>
+  <a class="userBox-avatar" href="/avatars/upload">
+    <%= image_tag current_user.profile.cdn_url(:small) %><span>click to change</span>
+  </a>
+  </div>
+<% else %>
+    <h2>Need some advice? <a href='/trades/new'>post your trade</a></h2>
+ <!-- <div class="userBox-form">
+    
+    <form method="post" action="/">
+    {% csrf_token %}
+    <div class="userBox-form-field">
+      {{ loginForm.username.label_tag }}
+      {% whitefield %}
+      {{ loginForm.username }}
+      {% endwhitefield %}
+    </div>
+    <div class="userBox-form-field">
+      {{ loginForm.password.label_tag }}
+      {% whitefield %}
+      {{ loginForm.password }}
+      {% endwhitefield %}
+    </div>
+    <div class="userBox-form-button">
+      <input type="submit" value="log in" class="userBox-form-button-login" />
+    </div>
+    </form>
+  </div>-->
+  
+  <div class="userBox-form">
+    <%= form_for :user, :url=>session_path(:user) do |f| %>
+   <div class="userBox-form-field">
+            
+            <%= f.label :username, "Username" %>
+            <%= f.text_field :username, :class => 'round-box white' %>
+          </div>
+          <div class="userBox-form-field">
+            <%= f.label :password %>
+            <%= f.password_field :password, :class => 'round-box white' %>
+          </div>
+      <div class="userBox-form-button">
+            <input type="submit" value="log in" class="userBox-form-button-login bluecss3" />
+          </div>
+<% end %>
+        <!--  {% if loginForm.errors %}
+          <p>Your username and password didn't match. Please try again.</p>
+          {% endif %}
+          
+          <form method="post" action="{% url django.contrib.auth.views.login %}">
+          {% csrf_token %}
+          <div class="userBox-form-field">
+            
+            {{ loginForm.username.label_tag }}
+            {% whitefield %}
+            {{ loginForm.username }}
+            {% endwhitefield %}
+          </div>
+          <div class="userBox-form-field">
+            {{ loginForm.password.label_tag }}
+            {% whitefield %}
+            {{ loginForm.password }}
+            {% endwhitefield %}
+          </div>
+          <div class="userBox-form-button">
+            <input type="submit" value="log in" class="userBox-form-button-login" />
+          </div>
+          </form> -->
+  </div>
+  <div class="userBox-links">
+
+    <a href="/users/sign_up/" class="bluecss3 userBox-register-link">Register</a>
+    <a href="/users/password/new" class="bluecss3 userBox-register-link">Forgot Password?</a>
+  <%= link_to "Sign in with Facebook", user_oauth_authorize_url(:facebook), :class => 'facebook-login' %>    
+    <!-- <a href="/users/password/new" class="userBox-forgot-link">I forgot my password</a> -->
+  </div>
+<% end %>
+</div>
+</div>
+
+<div class="tradesContainer clearfix">
+  <div class="trades-wrap">
+      <!-- <div class="trades-column-tab">
+              <h3><a href="/trades/browse/recent/{{ league|lower }}/">NFL</a></h3>
+            </div> -->
+      
+      <% @trades.each do |trade| %>
+        <%= render trade %>
+      <% end %>    
+    
+
+   <!--  <div class="tradeBox">
+      <div class="tradeBox-results">
+        <div class="tradeBox-icon down">
+          50% say "Forget it"
+        </div>
+      </div>
+    </div> -->
+  
+  </div>
+  <%= render :partial => 'ads/adcolumn', :locals => {:class_name => 'fright'} %>
+</div>
+
+

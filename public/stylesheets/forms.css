@@ -1,0 +1,65 @@
+/* ftc 'forms' style sheet
+ * copyright (c) 2009 fantasytradecritic.com
+ * @author mike murray
+ * @website http://murz.net
+ */
+
+label {color:#14b8c7;}
+input[type='text'],input[type='password'],select,textarea {background:url(../images/shadow-input_repeat.gif) repeat-x;border:2px solid #14b8c7;font-family:Lucida,"Lucida Grande","Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;font-size:0.9em;padding:2px;background-color:#d7d7d7;width:180px;}
+select {background:url(../images/shadow-select_repeat.gif) repeat-x;background-image:url(../images/shadow-select_repeat.gif);font-size:0.9em;}
+option {background:#fff;}
+textarea {background:url(../images/shadow-textarea_repeat.gif) repeat-x bottom;background-color:#fff;vertical-align:middle;}
+
+/* white field */
+.whiteField {background:url(../images/white-input_repeat.gif);}
+.whiteField input {width:100px;background:none;border:none;height:18px;padding:8px 0 8px 0;color:#13959F;font-weight:bold;font-family:Lucida,"Lucida Grande","Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;}
+.whiteField-leftWrap {background:url(../images/white-input_left.gif) no-repeat left;padding-left:13px;}
+.whiteField-rightWrap {background:url(../images/white-input_right.gif) no-repeat right;padding-right:13px;}
+
+/* blue button */
+.blueButton {border:none;background:#14B8C7;color:#fff;font-weight:bold;padding:5px 8px 5px 8px;text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
+.blueButton:hover {cursor:pointer;cursor:hand;background-color:#55CCD7;}
+
+/* green button */
+.greenButton {border:none;background:#88C714;color:#fff;font-weight:bold;padding:6px 10px 6px 10px;text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
+.greenButton:hover {cursor:pointer;cursor:hand;background-color:#A6D54F;}
+
+/* autocomplete */
+.form-field-autocomplete input[type='text'] {
+	border:none;
+	background:none;
+}
+
+.form-field-autocomplete {
+	float:left;
+	background:url(../images/shadow-input_repeat.gif) repeat-x;border:2px solid #14b8c7;background-color:#d7d7d7;
+}
+
+.errorExplanation {
+  -webkit-border-radius:4px;
+  padding:10px;
+  background:#222;
+  border:1px solid #ccc;
+  
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+.errorExplanation li {color:#ccc;}
+
+.form h2,.changePasswordForm h2 {color:#ccc;margin-bottom:5px;font-size:18px;}
+.form {background:#0f0f0f;padding:10px 20px 20px 20px;width:370px;margin:0 auto 0 auto;}
+.formWide {background:#0f0f0f;padding:10px 20px 20px 20px;width:750px;margin:0 auto 0 auto;}
+.form input[type='text'], .form input[type='password'] {width:225px;margin-right:5px;font-size:12px;}
+.form .form-buttons {width:auto;text-align:center;}
+.form td {padding-bottom:5px;}
+.form td.top {vertical-align:top;padding-top:3px;}
+.form td.remember {text-align:center;padding-top:5px;}
+.form td.remember label {display:inline;padding-left:10px;color:#999;font-size:13px;}
+.form table {margin-bottom:10px;margin-top:10px;font-size:11px;}
+.form label {text-align:right;width:95%;display:block;padding-right:10px;font-size:12px;}
+.form textarea {padding:5px;font-size:13px;width:220px;height:200px;}
+
+.field_with_errors label {color:#CF5A5A;}
+.field_with_errors input,
+.field_with_errors textarea {border:2px solid #CF5A5A;}

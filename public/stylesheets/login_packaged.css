@@ -1,0 +1,36 @@
+ .loginForm h2,.changePasswordForm h2 {color:#ccc;margin-bottom:5px;font-size:18px;}
+.loginForm {background:#0f0f0f;padding:10px 20px 20px 20px;width:370px;margin:0 auto 0 auto;}
+.loginFormWide {background:#0f0f0f;padding:10px 20px 20px 20px;width:750px;margin:0 auto 0 auto;}
+.loginForm input[type='text'], .loginForm input[type='password'] {width:225px;}
+.form-buttons {width:100%;text-align:center;}
+.loginForm td {padding-bottom:5px;}
+.loginForm td.remember {text-align:center;padding-top:5px;}
+.loginForm td.remember label {display:inline;padding-left:10px;color:#999;font-size:13px;}
+.loginForm table {margin-bottom:10px;margin-top:10px;}
+.loginForm label {text-align:right;width:90%;display:block;padding-right:10px;}
+.loginForm p {margin-bottom:10px;color:#CF5A5A;}
+.changePasswordForm {background:#0f0f0f;padding:10px 20px 20px 20px;width:470px;margin:0 auto 0 auto;}
+.changePasswordForm label {text-align:right;margin-right:5px;font-size:20px;}
+.changePasswordForm p {clear:both;margin-bottom:5px;font-size:11px;}
+.changePasswordForm .form-field {width:100%;text-align:center;padding-top:15px;}
+.changePasswordForm .errorlist li {color:#D75555;text-align:right;padding-right:50px;}
+.changePasswordForm .errorlist {font-size:0.9em;overflow:visible;position:relative;}
+.changePasswordForm .blueButton {width:150px;float:none;margin-top:10px;}
+h2.choose-username {background:none repeat scroll 0 0 #FFF4BF; border:2px solid #EFAE00; color:#CF7000; display:block; font-size:16px; margin:0 auto; padding:15px; width:900px}
+.loginFormWide i {margin-left:10px;font-size:11px;}
+.loginFormWide td:first-child {text-align:right;}
+.loginFormWide td:last-child {text-align:left;}
+.loginFormWide td.button {padding-top:20px;padding-bottom:20px;text-align:left;}
+.loginFormWide td.button input {width:80px;margin:0 auto 0 auto;float:none;display:block;}
+.loginFormWide label {margin-right:7px;font-size:13px;}
+.loginFormWide .field_with_errors input {float:left;}
+.loginFormWide h2, h3 {color:#aaa; margin-bottom:10px}
+#content #errorExplanation {border:1px solid #BF3100; color:#BF3100; background-color:#FFD0BF; clear:both; padding:13px}
+#content #errorExplanation h2 {font-size:18px; color:#BF3100}
+#content #errorExplanation ul {list-style:square; margin-left:30px; margin-top:5px; margin-bottom:5px; color:#BF3100}
+#content #errorExplanation ul li {color:#BF3100}
+.unhappy {margin-bottom:20px;margin-left:10px;}
+.devise-links .facebook-login {float:none;margin:5px auto 0 auto;}
+.devise-links li {text-align:center;padding-bottom:5px;font-size:12px;float:none;margin-left:5px;display:block;margin-left:0px;}
+.devise-links {margin-top:10px;width:100%;text-align:center;display:block;height:300px;}
+.devise-links a:link, .devise-links a:visited {border-bottom:0; text-decoration:underline}

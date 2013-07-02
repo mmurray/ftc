@@ -1,0 +1,187 @@
+/* ftc 'main' style sheet
+ * copyright (c) 2009 fantasytradecritic.com
+ * @author mike murray
+ * @website http://murz.net
+ */
+
+body {background:#1d1d1d;color:#67727F;font-family:Lucida,"Lucida Grande","Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+a:link, a:visited {color:#14b8c7;font-weight:bold;letter-spacing:-0.07em;text-decoration:none;border-bottom:1px solid #14b8c7;}
+a:hover {border-bottom:1px solid #A2D348;color:#A2D348}
+
+/* wrappers */
+#page {width:960px;margin:0 auto 0 auto;}
+
+/* top section */
+h1 {float:left;width:176px;height:94px;margin:55px 0 0 0;}
+h1 a:link, h1 a:visited {background:url(../images/logo.gif);width:176px;height:94px;text-indent:-9999px;float:left;border:0;}
+h1 a:hover {border:0;}
+
+#navigation {float:right;margin-top:69px;}
+#navigation li {float:left;margin-left:8px;}
+#navigation li a:link, 
+#navigation li a:visited {width:72px;height:42px;display:block;text-indent:-9999px;border:none;}
+#navigation li a:hover {border:none;}
+#navigation li#nav_home a:link,
+#navigation li#nav_home a:visited {background:url(../images/nav_home.gif);}
+#navigation li#nav_home a:hover,#navigation li#nav_home.selected a:link,#navigation li#nav_home.selected a:visited {background-position:0 42px;}
+#navigation li#nav_about a:link,#navigation li#nav_about a:visited {background:url(../images/nav_about.gif);}
+#navigation li#nav_about a:hover,#navigation li#nav_about.selected a:link,#navigation li#nav_about.selected a:visited {background-position:0 42px;}
+#navigation li#nav_browse a:link,#navigation li#nav_browse a:visited {background:url(../images/nav_browse.gif);}
+#navigation li#nav_browse a:hover,#navigation li#nav_browse.selected a:link,
+#navigation li#nav_browse.selected a:visited {background-position:0 42px;}
+#navigation li#nav_contact a:link,#navigation li#nav_contact a:visited {background:url(../images/nav_contact.gif);}
+#navigation li#nav_contact a:hover,#navigation li#nav_contact.selected a:link,
+#navigation li#nav_contact.selected a:visited {background-position:0 42px;}
+#navigation li#nav_search a:link,#navigation li#nav_search a:visited {background:url(../images/nav_search.gif);}
+#navigation li#nav_search a:hover,#navigation li#nav_search.selected a:link,#navigation li#nav_search.selected a:visited {background-position:0 42px;}
+#navigation li#nav_blog a:link,#navigation li#nav_blog a:visited {background:url(../images/nav_blog.gif);}
+#navigation li#nav_blog a:hover,#navigation li#nav_blog.selected a:link,#navigation li#nav_blog.selected a:visited {background-position:0 42px;}
+
+/* user menu */
+#menu {min-height:10px;clear:right;float:right;margin-right:14px;margin-bottom:10px;margin-top:35px;}
+#menu {color:#14b8c7;}
+#menu a:link, #menu a:visited {font-size:1em;}
+
+/* main content */
+#content {clear:both;}
+
+/* footer */
+#footer {clear:both;width:100%;text-align:center;padding:20px 0 30px 0;}
+#footer p {color:#3F3F3F;font-size:0.9em;font-weight:bold;}
+#footer a:link, #footer a:visited {color:#4F4F4F;border-bottom:0;}
+#footer a:hover {border-bottom:1px solid #A2D348;color:#A2D348}
+
+/* boxes */
+
+.fleft {float:left;}
+.fright {float:right;}
+.fullWidth {width:960px;}
+
+.padded {padding:15px 17px;}
+
+
+.fullWidth.padded {width:926px;}
+
+.big-round-box {
+  
+}
+.round-box {
+  -moz-border-radius:12px;
+  -o-border-radius:12px;
+  -webkit-border-radius:12px;
+  border-radius:12px;
+}
+
+.black {background-color:#0b0b0b;}
+.white {background-color:#fff;}
+.grey {background:#363636;}
+
+.grey h2 {color:#14B8C7;font-size:1.2em;letter-spacing:-0.05em;}
+.grey p {color:#919191;font-size:0.9em;line-height:1.5em;margin-top:5px;margin-bottom:20px;}
+.grey h3 {color:#ccc;margin-top:5px;}
+.grey ul {color:#aaa;list-style:square;margin-left:20px;margin-top:5px;margin-bottom:15px;font-size:14px;line-height:1.5em;}
+
+.ads-column-skinny {width:180px;float:right;}
+.ads-title {color:#555;font-size:0.8em;letter-spacing:0.2em;width:100%;text-align:center;padding-bottom:5px;}
+.ad-skyscraper {width:160px;margin:0px auto 10px auto;}
+.ad-box {width:180px;margin:0 auto 5px auto;}
+.ad-box a,.ad-skyscraper a {border:0;}
+.ad-box.amazon {
+  width:120px;margin:0px auto 0 auto;
+}
+
+.f12 {font-size:12px;}
+.f16 {font-size:16px;}
+
+#system-message {background:url(../images/system-message.gif) no-repeat bottom left;height:39px;width:100%;background-color:#14B8C7;color:#fff;text-align:center;}
+#system-message a.close:link,#system-message a.close:visited {text-indent:-9999px;display:block;border:0;background:url(../images/system-message-close.gif);height:39px;width:45px;float:right;}
+#system-message a.close:hover {background-position:0px -39px;}
+#system-message p {font-weight:bold;padding-top:8px;}
+
+.login-party.large:link, .login-party.large:visited {width:32px;height:32px;display:block;text-indent:-9999px;border:0;text-decoration:none;}
+
+.login-party.large.facebook:link, .login-party.large.facebook:visited {background:url(../images/social-icons/facebook.png);}
+.login-party.large.twitter:link, .login-party.large.twitter:visited {background:url(../images/social-icons/twitter.png);}
+.login-party.large.google:link, .login-party.large.google:visited {background:url(../images/social-icons/google.png);}
+.login-party.large.yahoo:link, .login-party.large.yahoo:visited {background:url(../images/social-icons/yahoo.png);}
+.login-party.large.myspace:link, .login-party.large.myspace:visited {background:url(../images/social-icons/myspace.png);}
+.login-party.large.microsoft:link, .login-party.large.microsoft:visited {background:url(../images/social-icons/microsoft.png);}
+
+
+.registrationForm-rightCol {width:50%;}
+.registrationForm-externalLogin h2 {color:#777;}
+.registrationForm-externalLogin {padding-left:10px;}
+.registrationForm-externalLogin ul {padding:10px 20px 40px 15px;}
+.registrationForm-externalLogin li {float:left;margin-right:10px;}
+.registrationForm-externalLogin li.facebook {float:left;margin-left:10px;margin-top:5px;}
+.registrationForm-quickLogin {padding-bottom:35px;padding-left:15px;padding-right:15px;padding-top:10px;background-color:#0F0F0F;}
+.registrationForm-quickLogin h2 {color:#555;font-size:1.2em;margin-bottom:10px;}
+.registrationForm-quickLogin label {color:#999;font-size:0.9em;display:block;float:left;width:125px;font-size:0.9em;margin:4px 9px 0 0;text-align:right;}
+.registrationForm-quickLogin .form-field {clear:both;margin-bottom:5px;}
+.registrationForm {text-align:center;}
+.registrationForm label {float:left;width:146px;display:block;text-align:right;margin-right:10px;}
+.registrationForm form p {clear:both;margin-bottom:5px;}
+.registrationForm h2 {text-align:left;margin-bottom:10px;}
+.registrationForm-quickLogin .form-button {margin:15px auto 0px auto;width:70px;}
+.registrationForm .blueInput {width:75px;margin:10px 0 0 0;}
+
+.pagination {clear:both;width:100%;text-align:center;padding-top:20px;padding-bottom:20px;font-size:1.2em;}
+
+a.facebook-login:link,
+a.facebook-login:visited {background:url(../images/social-icons/signin_facebook.png);width:150px;height:23px;display:block;text-indent:-9999px;border:0;}
+a.facebook-login:hover {background-position:0px -24px;}
+a.facebook-login:focus,
+a.facebook-login:active {background-position:0px -47px;}
+
+.ui-dailog-content .registrationForm-quickLogin input[type="text"],.ui-dailog-content .registrationForm-quickLogin input[type="password"], select, .ui-dailog-content .registrationForm-quickLogin textarea {width:120px;}
+
+/*table.form-wrap {}
+table.form-wrap tr td:first-child {text-align:right;}*/
+
+
+html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.bluecss3 {
+  margin-right:5px;
+  margin-left:5px;
+  background:url(../images/sans-css3/blue_gradient.jpg) repeat-x;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, #0c7e88),
+      color-stop(1, #14b8c7)
+  );
+  background:-moz-linear-gradient(
+      center bottom,
+      #0c7e88 0%,
+      #14b8c7 100%
+  );
+  color:#fff;
+  font-size:12px;
+  padding:7px;
+  float:left;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  text-shadow:-1px -1px 1px rgba(0,0,0,0.3),1px 1px 2px rgba(255,255,255,0.6);
+  -moz-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  box-shadow:inset 1px 1px 3px rgba(255,255,255,0.5),inset -1px -1px 2px rgba(0,0,0,0.3);
+  border:0;
+}

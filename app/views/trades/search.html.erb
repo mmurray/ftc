@@ -1,0 +1,76 @@
+<% content_for :stylesheets do %>
+  <%= raw stylesheet_link_merged :search %>
+<% end %>
+<div class="round-box padded black clearfix">
+  <div class="searchTrades-top">
+      <form action="/trades/search" method="get">
+        <h2><label for="search">Search:</label> <%= text_field_tag(:search, @search) %></h2>
+        <ul class="searchTrades-top-menu">
+          <li><label for="search_by">In:</label> <%= select_tag(:search_by, options_for_select([['Players','players'],['Teams','teams'],['Users','users']],@search_by)) %></li>
+        </ul>
+        <div class="searchTrades-top-buttons">
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+          <input class="blueButton round-box" type="submit" value="Go" />
+        </div>
+      </form>
+  </div>
+</div>
+<div class="searchContainer clearfix">
+  <div class="search-wrap">
+    <% if !@players.empty? %>
+      <table>
+      <% @players.each do |player| %>
+        <tr>
+          <td>
+          <a class="search_result" href="<%= player.url %>"><span class="name"><%= player.name %></span></a>
+          </td>
+        </tr>
+      <% end %>
+      </table>
+      <div class="pagination">
+        <span class="step-links">
+            <%= will_paginate(@players) %>
+        </span>
+      </div>
+    <% end %>
+    <% if !@users.empty? %>
+      <table>
+      <% @users.each do |user| %>
+        <tr>
+          <td>
+          <a class="search_result" href="/users/<%= user.id %>/<%= user.username.parameterize %>"><span class="name"><%= user.username %></span></a>
+          </td>
+        </tr>
+      <% end %>
+      </table>
+       <div class="pagination">
+        <span class="step-links">
+            <%= will_paginate(@users) %>
+        </span>
+      </div>
+    <% end %>
+    <% if !@teams.empty? %>
+      <table>
+      <% @teams.each do |team| %>
+        <tr>
+          <td>
+          <a class="search_result" href="/teams/<%= team.id %>/<%= team.name.parameterize %>-<%= team.league.abbreviation.downcase %>"><span class="name"><%= team.city %> <%= team.name %></span></a>
+          </td>
+        </tr>
+      <% end %>
+      </table>
+       <div class="pagination">
+        <span class="step-links">
+            <%= will_paginate(@teams) %>
+        </span>
+      </div>
+    <% end %>
+    <div class="pagination">
+        <span class="step-links">
+         
+        </span>
+    </div>
+  </div>
+ 
+  <%= render :partial => 'ads/adcolumn', :locals => {:class_name=>'fright'}%>
+</div>

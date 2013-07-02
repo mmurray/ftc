@@ -1,0 +1,37 @@
+--- 
+javascripts: 
+- base: 
+  - rails
+  - util
+  - application
+  - main
+  - trades
+- tradeForm:
+  - jqueryui
+  - tradeForm
+stylesheets: 
+- base:
+  - reset
+  - jquery.ui
+  - main
+  - forms
+  - trades
+- home:
+  - home
+- login:
+  - login
+- flatpage:
+  - flatpage
+- registration:
+  - registration
+- admin:
+  - admin
+- tradeForm:
+  - autocomplete
+  - tradeForm
+- search:
+  - search
+- viewTrade:
+  - viewTrade
+- viewUser:
+  - viewUser
